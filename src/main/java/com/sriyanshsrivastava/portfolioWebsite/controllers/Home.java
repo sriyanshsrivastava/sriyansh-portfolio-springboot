@@ -1,13 +1,14 @@
-package com.sriyanshsrivastava.portfolioWebsite;
+package com.sriyanshsrivastava.portfolioWebsite.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
-public class Test {
+public class Home {
 
     @GetMapping("/")
     public String home(){
-        return "hello world";
+        return "welcome to the website";
     }
 }
