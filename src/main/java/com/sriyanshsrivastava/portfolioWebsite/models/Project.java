@@ -4,11 +4,12 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-
 import java.time.LocalDateTime;
 import java.util.List;
+
 
 @Data
 @AllArgsConstructor
@@ -29,6 +30,7 @@ public class Project {
     @ElementCollection
     @CollectionTable(name = "project_tech_stack", joinColumns = @JoinColumn(name= "project_id"))
     @Column(name = "tech")
+    @ToString.Exclude
     private List<String> techStack;
 
     private String githubLink;
